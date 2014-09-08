@@ -7,6 +7,8 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.URL;
 
+import com.justsystems.springboot.sample.validator.constraints.ZipCode;
+
 @Entity
 public class Item {
 
@@ -21,5 +23,8 @@ public class Item {
 	@URL
 	public String url;
 
+	@NotNull
+	@ZipCode
+	public String zipCode;
 
 }
