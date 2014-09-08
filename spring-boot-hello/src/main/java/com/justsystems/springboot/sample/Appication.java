@@ -3,11 +3,15 @@ package com.justsystems.springboot.sample;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+@Configuration
 @ComponentScan
+@EnableJpaRepositories
 @EnableAutoConfiguration
-public class Main {
+public class Appication {
 	public static void main(String[] args) {
-		SpringApplication.run(Main.class, args);
+		SpringApplication.run(Appication.class, args);
 	}
 }
