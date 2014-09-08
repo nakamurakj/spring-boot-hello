@@ -1,6 +1,5 @@
 package com.justsystems.springboot.sample.web;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -25,7 +24,7 @@ public class ItemController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public @ResponseBody List<Item> all() {
-		return new ArrayList<>();
+		return service.findAll();
 	}
 
 	 @RequestMapping(value = "/find/{id}", method = RequestMethod.GET)
